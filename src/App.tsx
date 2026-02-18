@@ -1,6 +1,6 @@
 
 
-import './App.css'
+import './App.sass'
 import MainNav from './components/MainNav/MainNav'
 import ArticlesIndex from './components/ArticlesIndex/ArticlesIndex'
 import IssueInfo from './components/IssueInfo/IssueInfo'

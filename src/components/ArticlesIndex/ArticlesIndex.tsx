@@ -1,4 +1,5 @@
 import React from 'react'
+import sty from './ArticlesIndex.module.sass'
 
 function LandingPage() {
   const articles = [
@@ -59,7 +60,7 @@ function LandingPage() {
   ];
 
   const listItems = articles.map(article =>
-    <li>
+    <li className={sty.li}>
       <img src={`${article.imgSrc}`} alt={`${article.imgAlt}`} />
       <p>{article.subheading}</p>
       <div>
@@ -71,13 +72,13 @@ function LandingPage() {
 
   return (
 
-    <main>
-      <h2>New In:</h2>
-      <div>
+    <main className={sty.galMain}>
+      <h2 className={sty.h2}>New In:</h2>
+      <div className={sty.galButtons}>
         <button>gallery view</button>
         <button>cards view</button>
       </div>
-      <ul>{listItems}</ul>
+      <ul className={sty.ul}>{listItems}</ul>
     </main>
   )
 }
