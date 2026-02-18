@@ -1,3 +1,36 @@
 @use '../../App'
 
-     
+.nav
+     position: fixed
+     top: 0
+     right: 0
+     padding: .5rem 1rem 
+     border-bottom: 2px solid black
+     width: 100%
+     display: flex
+     justify-content: space-between
+     align-items: center
+     background-color: App.$light-grey
+
+     .navList
+          display: flex
+          gap: 1rem
+          font: 600 1.125rem "fjalla One", sans-serif
+          text-transform: uppercase
+          a
+               color: App.$dark-grey
+               text-decoration: none
+
+     .socialList
+          display: flex
+          gap: 1rem
+          align-items: center
+          justify-content: space-between
+
+          img
+               height: 1rem
+               width: auto
+
+          li:nth-child(n + 3)
+               img
+                    height: 1.5rem
