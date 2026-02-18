@@ -60,6 +60,9 @@ function LandingPage() {
   ];
 
   const listItems = articles.map((article, index) => {
+
+    // remainder operator % It gives what is left after division.
+    // this could be improved by using a for loop
     const isBottomElement = index % 3 === 1;
 
     if (!isBottomElement) {
@@ -108,18 +111,6 @@ function LandingPage() {
     }
 
   });
-
-
-  // const bottomItems = articles.filter(
-  //   // % is a remainder operator it gives you what is selft after division
-  //   (element, index) => index % 3 === 1
-
-  // )
-  // const topItems = articles.filter(
-  //   // % is a remainder operator it gives you what is selft after division
-  //   (element, index) => index % 3 != 1
-
-  // )
 
   return (
 
