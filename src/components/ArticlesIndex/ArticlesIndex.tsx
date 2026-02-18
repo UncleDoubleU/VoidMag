@@ -61,7 +61,11 @@ function LandingPage() {
 
   const listItems = articles.map(article =>
     <li className={sty.li}>
-      <img src={`${article.imgSrc}`} alt={`${article.imgAlt}`} />
+      <img
+        className={sty.galImg}
+        src={`${article.imgSrc}`}
+        alt={`${article.imgAlt}`}
+      />
       <p>{article.subheading}</p>
       <div>
         <span>curated by {article.curatedBy}</span>
@@ -74,7 +78,7 @@ function LandingPage() {
 
     <main className={sty.galMain}>
       <h2 className={sty.h2}>New In:</h2>
-      <div className={sty.galButtons}>
+      <div className={sty.galBtn}>
         <button>gallery view</button>
         <button>cards view</button>
       </div>
