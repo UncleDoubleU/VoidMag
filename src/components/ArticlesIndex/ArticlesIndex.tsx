@@ -59,20 +59,67 @@ function LandingPage() {
     }
   ];
 
-  const listItems = articles.map(article =>
-    <li className={sty.li}>
-      <img
-        className={sty.galImg}
-        src={`${article.imgSrc}`}
-        alt={`${article.imgAlt}`}
-      />
-      <p>{article.subheading}</p>
-      <div>
-        <span>curated by {article.curatedBy}</span>
-        <span>{article.articleLength} min read</span>
-      </div>
-    </li>
-  );
+  const listItems = articles.map((article, index) => {
+    const isBottomElement = index % 3 === 1;
+
+    if (!isBottomElement) {
+      return (<li
+        className={sty.li}
+        key={article.id}
+      >
+        {article.imgSrc ? <img
+          className={sty.galImg}
+          src={`${article.imgSrc}`}
+          alt={`${article.imgAlt}`}
+        /> : <div style={{
+          height: '800px',
+          width: '800px'
+        }}>
+          <p>loading...</p>
+        </div>}
+        <p>{article.subheading}</p>
+        <div>
+          <span>curated by {article.curatedBy}</span>
+          <span>{article.articleLength} min read</span>
+        </div>
+      </li>)
+    } else {
+      return (<li
+        className={sty.li}
+        key={article.id}
+      >
+
+        <p>{article.subheading}</p>
+        <div>
+          <span>curated by {article.curatedBy}</span>
+          <span>{article.articleLength} min read</span>
+        </div>
+        {article.imgSrc ? <img
+          className={sty.galImg}
+          src={`${article.imgSrc}`}
+          alt={`${article.imgAlt}`}
+        /> : <div style={{
+          height: '800px',
+          width: '800px'
+        }}>
+          <p>loading...</p>
+        </div>}
+      </li>)
+    }
+
+  });
+
+
+  // const bottomItems = articles.filter(
+  //   // % is a remainder operator it gives you what is selft after division
+  //   (element, index) => index % 3 === 1
+
+  // )
+  // const topItems = articles.filter(
+  //   // % is a remainder operator it gives you what is selft after division
+  //   (element, index) => index % 3 != 1
+
+  // )
 
   return (
 
