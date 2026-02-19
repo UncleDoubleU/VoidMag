@@ -119,13 +119,12 @@ function LandingPage() {
     <main className={sty.galMain}>
       <h2 className={sty.h2}>New In:</h2>
       <div className={sty.galViewCont} aria-label='change view'>
-        <button aria-label='gallery view'><ViewColumnsIcon className={sty.icons} />
-        
-          </button>
+        <button aria-label='gallery view'>
+          <ViewColumnsIcon className={sty.icons} />
+        </button>
         <button aria-label='cards view'>
           < Squares2X2Icon className={sty.icons} />
-        
-          </button>
+        </button>
       </div>
       <ul className={sty.ul}>{listItems}</ul>
     </main>
