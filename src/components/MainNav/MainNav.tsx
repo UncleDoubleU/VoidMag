@@ -5,12 +5,15 @@ import TiktokLogo from '../../assets/img/TIKTOK_SOCIAL_ICON_SOLO_BLACK.png'
 import SpotifyLogo from '../../assets/img/Spotify_Primary_Logo_RGB_Black.png'
 import YoutubeLogo from '../../assets/img/yt_icon_almostblack_digital.png'
 
-function MainNav() {
+function MainNav() { 
      return (
           <header>
-               <button>skip to main content</button>
+               <a href={'#'} className={sty.skipToMain}>skip to main content</a>
                <nav role='navigation' className={sty.nav}>
-                    <h1 className={sty.logo}>Outline Mag</h1>
+                    <div className={sty.logoCont}>
+                         <div className={sty.shape}></div>
+                    <h1 className={sty.text}>VoidMag</h1>
+                    </div>
                     <ul className={sty.navList}>
                          <li className={sty.navItem}>
                               <a href="#">magazine</a>

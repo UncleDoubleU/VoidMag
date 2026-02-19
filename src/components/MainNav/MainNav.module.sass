@@ -1,16 +1,49 @@
 @use '../../App'
 
-.nav
+$hoverColour: rgb(0, 25, 138)
+
+header
      position: fixed
      top: 0
-     right: 0
-     padding: .5rem 1rem 
-     border-bottom: 2px solid black
+     left: 0
      width: 100%
+     padding: .5rem 1rem
+     background-color: App.$light-grey
+
+.skipToMain
+     z-index: 10
+     font: 450 1rem/1.5rem "Public Sans", sans-serif
+     color: App.$dark-grey
+     padding: .25rem .65rem
+     background: App.$light-grey
+     border: 2px solid App.$dark-grey
+     border-radius: .25rem
+
+     &:hover,
+     &:focus-visible
+          border: 2px solid $hoverColour
+          color: $hoverColour
+          background: rgba(174, 229, 255, 0.5)
+
+.nav
+
+     border-bottom: 2px solid black
      display: flex
      justify-content: space-between
      align-items: center
-     background-color: App.$light-grey
+
+     .logoCont
+          display: flex
+          gap: .25rem
+          align-items: flex-start
+          height: 2rem
+
+          .shape
+               width: 1.55rem
+               height: 1.55rem
+               background-color: App.$dark-grey
+          .text
+               font: 600 1.75rem/1.75rem "Fjalla One", sans-serif
 
      .navList
           display: flex

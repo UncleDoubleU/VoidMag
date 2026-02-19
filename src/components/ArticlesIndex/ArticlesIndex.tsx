@@ -33,7 +33,7 @@ function LandingPage() {
     {
       id: 3,
       heading: "The New Romantics",
-      subheading: "A generation of image-makers is rejecting fashion photography's aspirational certainty in favor of something more tender—diaristic.",
+      subheading: "A generation of image-makers is rejecting fashion photography's aspirational certainty in favor of something more tender.",
       imgSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       imgAlt: "Warm-toned portrait with film grain quality, model gazing softly away from camera",
       curatedBy: "Amara Diallo",
@@ -82,10 +82,10 @@ function LandingPage() {
           }}>
             <p>loading...</p>
           </div>}
-        <p>{article.subheading}</p>
-        <div>
-          <span>curated by {article.curatedBy}</span>
-          <span>{article.articleLength} min read</span>
+        <p className={sty.subHeading}>{article.subheading}</p>
+        <div className={sty.artInfoCont}>
+          <p className={sty.curatedBy}>curated by {article.curatedBy}</p>
+          <p className={sty.artLength}>{article.articleLength} min</p>
         </div>
       </li>)
     } else {
@@ -93,10 +93,10 @@ function LandingPage() {
         className={sty.li}
         key={article.id}
       >
-        <p>{article.subheading}</p>
-        <div>
-          <span>curated by {article.curatedBy}</span>
-          <span>{article.articleLength} min read</span>
+        <p className={sty.subHeading}>{article.subheading}</p>
+        <div className={sty.artInfoCont}>
+          <p className={sty.curatedBy}>curated by {article.curatedBy}</p>
+          <p className={sty.artLength}>{article.articleLength} min</p>
         </div>
         {article.imgSrc ?
           <img
