@@ -1,7 +1,7 @@
-import { Squares2X2Icon, ViewColumnsIcon } from '@heroicons/react/24/outline'
-import sty from './ArticlesIndex.module.sass'
+import { Squares2X2Icon, ViewColumnsIcon } from '@heroicons/react/24/outline';
+import sty from './ArticlesIndex.module.sass';
 
-function LandingPage() {
+function LandingPage(mainContentId) {
   const articles = [
     {
       id: 0,
@@ -58,6 +58,7 @@ function LandingPage() {
       articleLength: 10,
     }
   ];
+
 
   const listItems = articles.map((article, index) => {
 
@@ -116,7 +117,7 @@ function LandingPage() {
 
   return (
 
-    <main className={sty.galMain}>
+    <main className={sty.galMain} id={mainContentId}>
       <h2 className={sty.h2}>New In:</h2>
       <div className={sty.galViewCont} aria-label='change view'>
         <button aria-label='gallery view'>

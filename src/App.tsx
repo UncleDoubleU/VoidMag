@@ -4,13 +4,15 @@ import './App.sass'
 import MainNav from './components/MainNav/MainNav'
 import ArticlesIndex from './components/ArticlesIndex/ArticlesIndex'
 import IssueInfo from './components/IssueInfo/IssueInfo'
-function App() {
+import { useId } from 'react'
 
+function App() {
+  const mainId = useId();
 
   return (
     <>
-      <MainNav />
-      <ArticlesIndex />
+      <MainNav mainContentId={mainId} />
+      <ArticlesIndex mainContentId={mainId}/>
       <IssueInfo />
     </>
   )
