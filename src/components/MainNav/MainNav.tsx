@@ -5,11 +5,15 @@ import TiktokLogo from '../../assets/img/TIKTOK_SOCIAL_ICON_SOLO_BLACK.png'
 import SpotifyLogo from '../../assets/img/Spotify_Primary_Logo_RGB_Black.png'
 import YoutubeLogo from '../../assets/img/yt_icon_almostblack_digital.png'
 
-function MainNav(mainContentId) {
-     console.log(mainContentId)
+interface idProps {
+     mainContentId: string
+}
+
+function MainNav(props: idProps) {
+
      return (
           <header>
-               <a href={mainContentId} className={sty.skipToMain}>skip to main content</a>
+               <a href={props.mainContentId} className={sty.skipToMain}>skip to main content</a>
                <nav role='navigation' className={sty.nav}>
                     <div className={sty.logoCont}>
                          <div className={sty.shape}></div>

@@ -1,7 +1,11 @@
 import { Squares2X2Icon, ViewColumnsIcon } from '@heroicons/react/24/outline';
 import sty from './ArticlesIndex.module.sass';
 
-function LandingPage(mainContentId) {
+interface idProps {
+  mainContentId: string
+}
+
+function LandingPage(props:idProps) {
   const articles = [
     {
       id: 0,
@@ -117,7 +121,7 @@ function LandingPage(mainContentId) {
 
   return (
 
-    <main className={sty.galMain} id={mainContentId}>
+    <main className={sty.galMain} id={props.mainContentId}>
       <h2 className={sty.h2}>New In:</h2>
       <div className={sty.galViewCont} aria-label='change view'>
         <button aria-label='gallery view'>

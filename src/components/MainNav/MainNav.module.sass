@@ -12,7 +12,7 @@ header
 
 .skipToMain
      position: absolute
-
+     opacity: 0
      z-index: 10
      font: 450 1rem/1.5rem "Public Sans", sans-serif
      color: App.$dark-grey
@@ -22,12 +22,9 @@ header
      border-radius: .35rem
      align-content: center
      justify-content: center
-
-     &:hover,
+     
      &:focus-visible
-          border: 2px solid $hoverColour
-          color: $hoverColour
-          background: #e4f6ff
+          opacity: 1
 
 .nav
 
